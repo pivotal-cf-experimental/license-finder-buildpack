@@ -5,4 +5,6 @@ set -ex
 build_dir=$1
 
 export PATH=$build_dir/vendor/bundle/ruby/1.9.1/bin/:$PATH
+export GEM_HOME=$build_dir/vendor/bundle/ruby/1.9.1
+export GEM_PATH=$build_dir/vendor/bundle/ruby/1.9.1
 bundle exec license_finder
