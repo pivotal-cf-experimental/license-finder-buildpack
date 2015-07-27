@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -ex
+
+build_dir=$1
+
+export PATH=$build_dir/vendor/bundle/ruby/1.9.1/bin/:$PATH
+bundle exec license_finder
