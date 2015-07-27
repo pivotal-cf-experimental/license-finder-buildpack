@@ -9,4 +9,4 @@ cd $build_dir
 export PATH=$buildpack_dir/vendor/bundle/ruby/1.9.1/bin/:$PATH
 export GEM_HOME=$buildpack_dir/vendor/bundle/ruby/1.9.1
 export GEM_PATH=$buildpack_dir/vendor/bundle/ruby/1.9.1
-bundle exec license_finder
+BUNDLE_GEMFILE=$buildpack_dir/Gemfile bundle exec license_finder
