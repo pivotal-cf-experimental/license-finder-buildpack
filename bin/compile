@@ -3,7 +3,9 @@
 set -ex
 
 buildpack_dir=$(cd "$(dirname $0)/.." && pwd)
+build_dir=$1
 
+cd $build_dir
 export PATH=$buildpack_dir/vendor/bundle/ruby/1.9.1/bin/:$PATH
 export GEM_HOME=$buildpack_dir/vendor/bundle/ruby/1.9.1
 export GEM_PATH=$buildpack_dir/vendor/bundle/ruby/1.9.1
