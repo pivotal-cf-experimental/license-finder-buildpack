@@ -12,3 +12,4 @@ export PATH=$buildpack_dir/vendor/bundle/ruby/1.9.1/bin/:$PATH
 export GEM_HOME=$buildpack_dir/vendor/bundle/ruby/1.9.1
 export GEM_PATH=$buildpack_dir/vendor/bundle/ruby/1.9.1:$app_gem_path
 license_finder
+license_finder report
