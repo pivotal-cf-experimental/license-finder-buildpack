@@ -2,6 +2,8 @@
 
 set -ex
 
+env
+
 buildpack_dir=$(cd "$(dirname $0)/.." && pwd)
 build_dir=$1
 
