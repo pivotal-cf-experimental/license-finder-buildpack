@@ -6,7 +6,7 @@ buildpack_dir=$(cd "$(dirname $0)/.." && pwd)
 build_dir=$1
 
 cd $build_dir
-app_gem_path=$(find $build_dir | grep 'vendor/bundle/ruby' | sed -n 2p)
+app_gem_path=$(find $build_dir/vendor/bundle/ruby -maxdepth 1 | sed 1d | sed 'N;s/\n/:/')
 
 export PATH=$buildpack_dir/vendor/bundle/ruby/1.9.1/bin/:$PATH
 export GEM_HOME=$buildpack_dir/vendor/bundle/ruby/1.9.1
